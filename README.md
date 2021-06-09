@@ -6,6 +6,8 @@ microservice supports :
 * SMS notifications
 * Push notifications
 
+The number of requests that providers (SMS, Push notifications) can handle per minute are limited as it 10 reqeusts per minute.
+
 
 ### SMS Notifications
 
@@ -50,7 +52,6 @@ create .env file and Set the environment variables
     ```
 npm start
 ```
-
 You should see the following printed in your console.
 ```
 server is listen on port 3000
@@ -67,15 +68,43 @@ it's will run tests and send message to phone number you can edit this from file
 
 ### API endpoints:
 
-#### /auth
+#### /getToken
 Path | Method | Description
 ---|---|---
 /notifications/getToken | GET | GetToken
 
 #### /notification
-/notifications/sendSms | POST | Send sms messages to specfic clients take an
-/notifications/pushNotification | POST | publish notification to specfic clients
+Path | Method |  Parameter | Description | 
+---|---|---
+/notifications/sendSms | POST | token as Authorization header , object in body have { message ,
+                "clients" :[{
+                    "number" :"global format",
+                    "language":"en or ar ..." }]
+                    | Send sms messages to specfic clients take an
 
+Return status of sending sms messages
+
+Path | Method |  Parameter | Description | 
+---|---|---
+
+/notifications/pushNotification | POST | token as Authorization header , object in body have { message ,
+                "clients" :[{
+                    "token" :"client token device",
+                    "language":"en or ar ..." }] | publish notification to specfic clients
+
+Return status of sending publish notification
+
+
+
+
+## Docker build and Run
+
+You can then build and run the Docker image
+
+```
+docker build -t <name-image> .
+docker run -it --rm --name <name> name-image
+```
 
 ## TODOs
 
