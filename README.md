@@ -74,7 +74,7 @@ Path | Method | Description
 /notifications/getToken | GET | GetToken
 
 #### /notification
-Path | Method |  Parameter | Description | 
+Path | Method |  Parameter | Description 
 ---|---|---
 /notifications/sendSms | POST | token as Authorization header , object in body have { message ,
                 "clients" :[{
@@ -84,9 +84,8 @@ Path | Method |  Parameter | Description |
 
 Return status of sending sms messages
 
-Path | Method |  Parameter | Description | 
+Path | Method |  Parameter | Description 
 ---|---|---
-
 /notifications/pushNotification | POST | token as Authorization header , object in body have { message ,
                 "clients" :[{
                     "token" :"client token device",
