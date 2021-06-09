@@ -76,11 +76,7 @@ Path | Method | Description
 #### /notification
 Path | Method |  Parameter | Description 
 ---|---|---
-/notifications/sendSms | POST | token as Authorization header , object in body have { message ,
-                "clients" :[{
-                    "number" :"global format",
-                    "language":"en or ar ..." }]
-                    | Send sms messages to specfic clients take an
+/notifications/sendSms | POST | token as Authorization heade | Send sms messages to specfic clients take an
 
 Return status of sending sms messages
 
