@@ -106,11 +106,10 @@ function convertToLanguage(message , language){
     return new Promise ( (resolve , reject) =>{
     translate(message, { to: language, engine: "google", key: translateKey }).then(
         (message_return)=>{
-            console.log(message_return +'7a7a7a7');
             resolve(message_return);
         }).catch((err)=>{
             console.log(err);
-            reject( 'error');
+            reject( 'error ' + err);
         })
     });
 }

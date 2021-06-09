@@ -21,7 +21,6 @@ exports.sendSms = (req, res, next) => {
                 res.status(200).json({
                     "status" : 'SMS Sent',
                 })
-                res.status(200).send('SMS Sent'); 
                 // to test limits requests 
                 // setTimeout(() => { queueRequests.remove_request(cur_timestamp);}, 10000);
             }).catch( err=>{
@@ -74,7 +73,6 @@ exports.sendPushNotfication = (req, res, next) => {
             })
         })
     } catch (err) {
-        //console.log(err);
         res.json({
             "error" : err,
         })
