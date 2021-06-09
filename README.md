@@ -100,3 +100,4 @@ docker run -it --rm --name <name> name-image
 
 ## TODOs
 
+* develop Strategy Design Pattern to seprate each notfication type
