@@ -28,6 +28,7 @@ The microservice send a notification in Client preferred language , The supporte
 ## simple diagram of the architecture
 
 
+![notification](https://user-images.githubusercontent.com/15314292/121393424-9cca4380-c950-11eb-9fc2-4b8dfd97132e.png)
 
 
 ## Installation And Run Service
