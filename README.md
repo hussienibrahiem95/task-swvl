@@ -82,8 +82,7 @@ Return status of sending sms messages
 
 Path | Method |  Parameter | Description 
 ---|---|---|---
-/notifications/pushNotification | POST | token as Authorization header , object in body have { message ,"clients" :[{
-"token" :"client token device","language":"en or ar ..." }] | publish notification to specfic clients
+/notifications/pushNotification | POST | token as Authorization header , object in body have { message ,"clients" :[{"token" :"client token device","language":"en or ar ..." }] | publish notification to specfic clients
 
 Return status of sending publish notification
 
