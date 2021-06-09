@@ -10,7 +10,6 @@ const fcm_server_key = process.env.FCM_API_KEY;
 
 // send individual sms message with twilio 
 function sendMsg_individual (client_number , client_message){
-    console.log(client_message);
     return new Promise ( (resolve , reject) =>{
         client.messages.create ({
             to : client_number,

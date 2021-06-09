@@ -59,10 +59,8 @@ describe('Test Notfications API ',()=>{
     describe("POST /notifications/sendSms" , ()=>{
         it("it should not send message and return error that no clients pass " , (done) =>{
             
-            console.log(token_api);
             let data = {
                 "message" : "hello"
-
             };
             // first get token 
             chai.request(server)
